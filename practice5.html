@@ -1,0 +1,65 @@
+<html>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <style>
+
+        .outerbox ~ p{
+            color: red;
+        }
+        .mybox{
+            border: 2px solid black;
+            flex: 2;
+            height:50px;
+        }
+        .mybox:hover{
+            color: red;
+            background-color: brown;
+            cursor: pointer;
+        }
+        .outerbox{
+            border: 2px solid black;
+            display: flex;
+            flex-direction: row;
+        }
+        div > p{
+            color: chartreuse;
+        }
+        p:hover{
+            color: crimson;
+            cursor: pointer;
+        }
+        div:hover{
+            color: darkgoldenrod;
+        }
+         p::first-letter{
+            color: rgb(0, 0, 0);
+        }
+        p::selection{
+            color: greenyellow;
+            background-color: rgb(97, 156, 184);
+        }
+        p::before{
+            hello
+        }
+        html{
+            background: linear-gradient(orange,white,green,lightblue);
+        }
+        h2:hover{
+            cursor: pointer;
+            cursor:wait;
+        }
+    </style>
+    <div class="outerbox">
+        <p style="opacity: 0.5;">THis is child selector(symbol '>')</p>
+        <div>
+            <p>this is descendent selector(space between two selector)</p>
+        </div>
+        <div class="mybox"><h2>1</h2></div>
+        <div class="mybox"><h2>2</h2></div>
+        <div class="mybox"><h2>3</h2></div>
+    </div>
+    <p class="para">This is siblingselector(symbol '+')</p>
+    <p>This is adjacent sibling selector("~")</p>
+    <h2>This is hover</h2>
+</html>
+//sudo classes
+//hover

@@ -1,0 +1,56 @@
+<Style>
+    .mybox{
+        border: 1px solid black;
+        background-color: cadetblue;
+        padding: 5%;
+        display:inline-block;
+        margin: 0%;
+        }
+    .mybox2{
+        border: 2px solid black;
+        background-color: rgb(156, 108, 202);
+        display: inline-block;
+    }
+    .outerbox{
+        border: 4px solid black;
+        display: flex;
+        flex-direction: row;
+    }
+    .innerbox{
+        display: flex;
+        flex-direction: row;
+        flex: 1;
+    }
+</Style>
+<div style="border: 5px solid black;display: flex;flex-direction: row;justify-content: space-around;">
+    <div class="mybox">1</div>
+    <div class="mybox">2</div>
+    <div class="mybox">3</div>
+    <div class="mybox">4</div>
+    <div class="mybox">5</div>
+    <div class="mybox">6</div>
+    <div class="mybox">7</div>
+    <div class="mybox">8</div>
+    <div class="mybox">9</div>
+</div>
+<br> <br><br>
+
+<div class="outerbox">
+    <div class="innerbox">
+        <div class="mybox2" style="display:flex; flex:1;flex-direction: column;"> 
+            <div style="border: 2px solid black;display:flex;align-items:center ; justify-content: center;"><h1>1</h1></div>
+            <div style="border: 2px solid black;"><h1>2</h1></div>
+        </div>
+        <div class="mybox2" style="flex: 1;">
+            <h1>50%</h1>
+        </div>
+    </div>
+    <div class="innerbox">
+        <div class="mybox2" style="flex: 3;">
+            <h1>30%</h1>
+        </div>
+        <div class="mybox2" style="flex: 7;">
+            <h1>70%</h1>
+        </div>
+    </div>
+</div>

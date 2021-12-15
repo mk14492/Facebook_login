@@ -1,0 +1,63 @@
+<style>
+    .body{
+        display: flex;
+        flex-direction: row;
+        justify-content: stretch;
+        padding-left: 30%;
+        padding-right: 20%;
+        padding-bottom: 20%;
+        font-family: sans-serif;
+    }
+    .form_container p{
+        color: red;
+    }
+    .form_container{
+        border: 1px solid black;
+        display: flex; 
+        padding:30px ;
+        padding-right: 20%;
+        flex-direction: column;
+    }
+    .form_fields{
+        padding: 10px;
+        display: flex;
+        flex-direction: row;
+        justify-content: start;
+        align-items: center;
+    }
+    .input_boxes{
+        margin-left: 20px;
+        padding: 10px;
+        flex: 7;
+    }
+    .farm_label{
+        flex: 3;
+    }
+    .move_to_right{
+        justify-content: end;
+    }
+    .nice_button{
+        background-color: grey;
+    }
+</style>
+<body class="body">
+    <div class="form_container">
+        <p style="font-size: 27px;">Registration Form</p>
+        <form>
+            <div class="form_fields">
+                <label class="farm_label">First Name: <input type="text" placeholder="First name" class="input_boxes"> </label>
+            </div>
+            <div class="form_fields">
+                <label class="farm_label">Last Name: <input type="text" placeholder="Last name" class="input_boxes"> </label>
+            </div>
+            <div class="form_fields">
+                <label class="farm_label">Email: <input type="text" placeholder="Email" class="input_boxes"> </label>
+            </div>
+        </form>
+        <div class="move_to_right form_fields">
+            <input type="submit" value="Register" class="nice_button">
+        </div>
+    </div>
+
+
+</body>
