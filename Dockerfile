@@ -1,2 +1,2 @@
-FROM ubuntu
-ADD ./var/www/html
+FROM hshar/webapp
+ADD . /var/www/html
