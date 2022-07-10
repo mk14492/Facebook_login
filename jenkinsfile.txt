@@ -1,0 +1,15 @@
+node {
+    stage('git checkout') { 
+        git branch: 'main', url: 'https://github.com/anilsb06/Facebook_login.git'
+    }
+    stage('docker build image'){
+        sh "docker build . -t anilsb06/login_page"
+        sh "docker run -it -d -p 83:80 anilsb06/login_page"
+    }
+    stage('pushing images to dockerhub'){
+        withCredentials([string(credentialsId: '6fa64c48-3869-406a-88e0-e127d9005e55', variable: 'DockerPassword')]) {
+        sh "docker login -u anilsb06 -p ${DockerPassword}"
+        sh "docker image push anilsb06/login_page"
+}
+    }
+}
