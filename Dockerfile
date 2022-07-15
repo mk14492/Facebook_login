@@ -1,3 +1,4 @@
 FROM anilsb06/apache2
 ADD ./index.html /var/www/html
-RUN service apache2 start
+CMD ["service apache2 start"]
+EXPOSE 80
