@@ -1,8 +1,6 @@
-FROM anilsb06/apache2
-RUN service apache2 start
-ENTRYPOINT sh "service apache2 status"
+FROM hshar/webapp
+RUN rm /var/www/html/*
 ADD ./index.html /var/www/html
-EXPOSE 91
 
 
 
